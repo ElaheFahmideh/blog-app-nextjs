@@ -26,7 +26,8 @@
       "@constants/*": ["constants/*"],
       "@ui/*": ["ui/*"],
       "@components/*": ["components/*"],
-      "@hooks/*": ["hooks/*"]
+      "@hooks/*": ["hooks/*"],
+      "@models/*": ["models/*"]
     }
   },
   "include": [
