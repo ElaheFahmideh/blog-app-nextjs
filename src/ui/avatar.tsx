@@ -14,7 +14,6 @@ export default function Avatar({ avatarUrl, width = '25', height = '25' }: Reado
       alt={avatarUrl}
       width={width}
       height={height}
-      quality={90}
       unoptimized
     />
   );
