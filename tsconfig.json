@@ -27,7 +27,8 @@
       "@ui/*": ["ui/*"],
       "@components/*": ["components/*"],
       "@hooks/*": ["hooks/*"],
-      "@models/*": ["models/*"]
+      "@models/*": ["models/*"],
+      "@utils/*": ["utils/*"]
     }
   },
   "include": [
