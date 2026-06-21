@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
+import { Suspense } from 'react';
 import Categories from './_components/categories';
+import Spinner from '@ui/spinner';
 
 type TLayoutProps = {
   children: React.ReactNode;
@@ -15,7 +17,9 @@ export default function Layout({ children }: TLayoutProps) {
       <h1 className="font-bold">لیست مطالب</h1>
       <div className="grid grid-cols-12 gap-8">
         <div className="col-span-12 lg:col-span-4 xl:col-span-3 space-y-4 text-secondary-500">
-          <Categories />
+          <Suspense fallback={<Spinner />}>
+            <Categories />
+          </Suspense>
         </div>
         <div className="col-span-12 lg:col-span-8 xl:col-span-9">{children}</div>
       </div>
