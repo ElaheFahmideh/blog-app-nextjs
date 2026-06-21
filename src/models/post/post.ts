@@ -25,7 +25,7 @@ interface IPost {
 
 interface ICategory extends Pick<IPost, '_id' | 'title' | 'slug'> {}
 
-interface IAuthor {
+export interface IAuthor {
   _id: NumberString;
   name: string;
   avatar: string;
