@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { Suspense } from 'react';
-import Categories from './_components/categories';
 import Spinner from '@ui/spinner';
+import Categories from '../_components/categories';
 
 type TLayoutProps = {
   children: React.ReactNode;

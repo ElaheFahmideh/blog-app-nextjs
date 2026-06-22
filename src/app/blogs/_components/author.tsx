@@ -1,7 +1,7 @@
-import { IAuthor } from '@models/post/post';
+import { IUser } from '@models/post/post';
 import Avatar from '@ui/avatar';
 
-export default function Author({ author }: Readonly<{ author: IAuthor }>) {
+export default function Author({ author }: Readonly<{ author: IUser }>) {
   return (
     <div className="flex items-center gap-x-1">
       <Avatar {...author} />

@@ -10,9 +10,9 @@ type PropsType = {
 export default function CoverImage({ coverImageUrl, title, slug }: Readonly<PropsType>) {
   return (
     <Link href={`/blogs/${slug}`}>
-      <div className="relative aspect-video overflow-hidden mb-5">
+      <div className="relative aspect-video rounded-md overflow-hidden mb-5">
         <Image
-          className="rounded-md object-cover object-center"
+          className="rounded-md object-cover object-center hover:scale-110 transition-all ease-in-out"
           src={coverImageUrl}
           alt={title}
           fill

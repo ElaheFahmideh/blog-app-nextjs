@@ -1,15 +1,27 @@
-interface IPost {
+interface IComment {
+  _id: NumberString;
+  user: IUser;
+  content: {
+    text: string;
+  };
+  status: number;
+  openToComment: boolean;
+  createdAt: string;
+  answers: TAnswers[];
+}
+
+export default interface IPost {
   _id: NumberString;
   title: string;
   slug: string;
-  category: ICategory;
+  category: TCategory;
   type: string;
   briefText: string;
   text: string;
   coverImage: string;
   readingTime: number;
   tags: string[];
-  author: IAuthor;
+  author: IUser;
   related: any[];
   createdAt: Date;
   updatedAt: Date;
@@ -19,17 +31,16 @@ interface IPost {
   likesCount: number;
   isLiked: boolean;
   isBookmarked: boolean;
-  comments: any[];
+  comments: IComment[];
   commentsCount: number;
 }
 
-interface ICategory extends Pick<IPost, '_id' | 'title' | 'slug'> {}
-
-export interface IAuthor {
+export interface IUser {
   _id: NumberString;
-  name: string;
   avatar: string;
   avatarUrl: string;
+  name: string;
 }
 
-export default IPost;
+type TAnswers = Omit<IComment, 'answers'>;
+export type TCategory = Pick<IPost, '_id' | 'title' | 'slug'>;

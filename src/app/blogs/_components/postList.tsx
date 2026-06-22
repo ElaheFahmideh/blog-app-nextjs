@@ -9,7 +9,7 @@ export default async function PostList() {
   const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/post/list`);
   const {
     data: { posts },
-  } = await res.json();
+  }: { data: { posts: IPost[] } } = await res.json();
 
   return posts.length > 0 ? (
     <div className="grid grid-cols-12 gap-8">

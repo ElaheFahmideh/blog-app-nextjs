@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
-import PostList from './_components/postList';
 import Spinner from '@ui/spinner';
+import PostList from '../_components/postList';
 
 export default function Blogs() {
   return (
